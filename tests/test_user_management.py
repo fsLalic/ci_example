@@ -53,11 +53,11 @@ class TestUserManagement(unittest.TestCase):
 
     def test_list_users_is_sorted(self):
         create_user("John Doe", "johndoe@domain.com",
-                    "password1", "1990-01-01")
+                    "StrongP@ssw0rd", "1990-01-01")
         create_user("Jane Doe", "janedoe@domain.com",
-                    "password2", "1990-01-01")
+                    "StrongP@ssw0rd", "1990-01-01")
         create_user("Alex", "Alex@domain.com",
-                    "password3", "1990-01-01")
+                    "StrongP@ssw0rd", "1990-01-01")
         arr = list_users()
         self.assertEqual(len(arr), 3)
         self.assertEqual(arr[0]["email"], "Alex@domain.com")
