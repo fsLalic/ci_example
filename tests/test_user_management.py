@@ -56,7 +56,7 @@ class TestUserManagement(unittest.TestCase):
                     "StrongP@ssw0rd", "1990-01-01")
         create_user("Jane Doe", "janedoe@domain.com",
                     "StrongP@ssw0rd", "1990-01-01")
-        create_user("Alex", "Alex@domain.com",
+        create_user("Alex James", "Alex@domain.com",
                     "StrongP@ssw0rd", "1990-01-01")
         arr = list_users()
         self.assertEqual(len(arr), 3)
