@@ -59,7 +59,10 @@ class TestUserManagement(unittest.TestCase):
         create_user("Alex", "Alex@domain.com",
                     "password3", "1990-01-01")
         arr = list_users()
-        self.assertEqual(arr, Sorted(arr, key=lambda x: x.email))
+        self.assertEqual(len(arr), 3)
+        self.assertEqual(arr[0]["email"], "Alex@domain.com")
+        self.assertEqual(arr[1]["email"], "janedoe@domain.com")
+        self.assertEqual(arr[2]["email"], "johndoe@domain.com")
 
 
 if __name__ == "__main__":
